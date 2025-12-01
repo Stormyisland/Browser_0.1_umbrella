@@ -12,4 +12,4 @@ class Browser(QMainWindow):
     def initUI(self):
         # Create the web engine view
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl("https://www.google.com"))
+        self.browser.setUrl(QUrl("https://www.####.com"))
