@@ -13,6 +13,14 @@ class Browser(QMainWindow):
         # Create the web engine view
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl("https://www.####.com"))
+         super().__init__()
+        layout = QVBoxLayout(self)
+
+        self.browser = QWebEngineView()
+        self.browser.setUrl(QUrl(url))
+
+        layout.addWidget(self.browser)
+
 
 class MainWindow(QMainWindow): 
     def __init__(self):
@@ -34,3 +42,4 @@ class MainWindow(QMainWindow):
         self.tabs.currentChanged.connect(self.on_tab_changed)
 
         self.setCentralWidget(self.tabs)
+        
