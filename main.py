@@ -46,8 +46,9 @@ class MainWindow(QMainWindow):
         # NAVIGATION toolbar
          navtb = QToolbar(Navigation")
          navtb.setIconSize(QSize(16, 16)) 
-         self.addAction(back_btn)
+         self.addToolBar(navtb)
 
+                          
          
 
         
