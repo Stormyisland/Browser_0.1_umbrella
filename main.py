@@ -44,9 +44,16 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.tabs)
 
         # NAVIGATION toolbar
-         navtb = QToolbar(Navigation")
-         navtb.setIconSize(QSize(16, 16)) 
-         self.addToolBar(navtb)
+        navtb = QToolbar(Navigation")
+        navtb.setIconSize(QSize(16, 16)) 
+        self.addToolBar(navtb)
+
+        # Back
+        back_btn = QAction(QIcon(os.path.join("icons", "back.png")), "Back", self)
+        back_btn.triggered.connect(lambda: self.current_browser().back())
+        navtb.addAction(back_btn)
+
+         
 
                           
          
