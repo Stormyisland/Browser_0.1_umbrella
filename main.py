@@ -42,4 +42,9 @@ class MainWindow(QMainWindow):
         self.tabs.currentChanged.connect(self.on_tab_changed)
 
         self.setCentralWidget(self.tabs)
+
+        # NAVIGATION toolbar
+         navtb = QToolbar(Navigation")
+         navtb.setIconSize(QSize(16, 16))    
+
         
