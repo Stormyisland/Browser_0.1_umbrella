@@ -53,6 +53,11 @@ class MainWindow(QMainWindow):
         back_btn.triggered.connect(lambda: self.current_browser().back())
         navtb.addAction(back_btn)
 
+ # Forward
+        next_btn = QAction(QIcon(os.path.join("icons", "forward.png")), "Forward", self)
+        next_btn.triggered.connect(lambda: self.current_browser().forward())
+        navtb.addAction(next_btn)
+
          
 
                           
