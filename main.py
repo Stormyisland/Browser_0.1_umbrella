@@ -62,7 +62,12 @@ class MainWindow(QMainWindow):
         reload_btn = QAction(QIcon(os.path.join("icons", "purple.png")), "Reload", self)
         reload_btn.triggered.connect(lambda: self.current_browser().reload())
         navtb.addAction(reload_btn)
-         
+
+
+ # Home
+        home_btn = QAction(QIcon(os.path.join("icons", "JOOGLE.png")), "Home", self)
+        home_btn.triggered.connect(self.navigate_home)
+        navtb.addAction(home_btn)
 
                           
          
