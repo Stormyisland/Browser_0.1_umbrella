@@ -58,6 +58,10 @@ class MainWindow(QMainWindow):
         next_btn.triggered.connect(lambda: self.current_browser().forward())
         navtb.addAction(next_btn)
 
+ # Reload
+        reload_btn = QAction(QIcon(os.path.join("icons", "purple.png")), "Reload", self)
+        reload_btn.triggered.connect(lambda: self.current_browser().reload())
+        navtb.addAction(reload_btn)
          
 
                           
