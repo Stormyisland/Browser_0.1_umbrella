@@ -69,6 +69,11 @@ class MainWindow(QMainWindow):
         home_btn.triggered.connect(self.navigate_home)
         navtb.addAction(home_btn)
 
+ # URL bar
+        self.urlbar = QLineEdit()
+        self.urlbar.returnPressed.connect(self.navigate_to_url)
+        navtb.addWidget(self.urlbar)
+
                           
          
 
