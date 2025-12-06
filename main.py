@@ -65,7 +65,7 @@ class MainWindow(QMainWindow):
 
 
  # Home
-        home_btn = QAction(QIcon(os.path.join("icons", "JOOGLE.png")), "Home", self)
+        home_btn = QAction(QIcon(os.path.join("icons", "GOOOGLE.png")), "Home", self)
         home_btn.triggered.connect(self.navigate_home)
         navtb.addAction(home_btn)
 
