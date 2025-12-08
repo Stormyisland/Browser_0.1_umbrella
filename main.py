@@ -74,6 +74,13 @@ class MainWindow(QMainWindow):
         self.urlbar.returnPressed.connect(self.navigate_to_url)
         navtb.addWidget(self.urlbar)
 # Try QtPy6
+
+
+        # Start with one tab
+        self.add_new_tab("https://google.com")
+
+        # Hook downloads
+        profile.downloadRequested.connect(self.handle_download)
                           
          
 
