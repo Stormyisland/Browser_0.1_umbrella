@@ -81,7 +81,14 @@ class MainWindow(QMainWindow):
 
         # Hook downloads
         profile.downloadRequested.connect(self.handle_download)
-                          
+
+     def add_new_tab(self, url="https://google.com"):
+        tab = BrowserTab(url)
+        idx = self.tabs.addTab(tab, "New Tab")
+        self.tabs.setCurrentIndex(idx)
+
+        tab.browser.urlChanged.connect(self.update_urlbar)
+        tab.browser.loadFinished.connect(self.update_tab_title)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    mm
          
 
         
