@@ -88,7 +88,10 @@ class MainWindow(QMainWindow):
         self.tabs.setCurrentIndex(idx)
 
         tab.browser.urlChanged.connect(self.update_urlbar)
-        tab.browser.loadFinished.connect(self.update_tab_title)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    mm
+        tab.browser.loadFinished.connect(self.update_tab_title) 
+
+        tab.browser.urlChanged.connect(self.update_urlbar)
+        tab.browser.loadFinished.connect(self.update_tab_title)
          
 
         
