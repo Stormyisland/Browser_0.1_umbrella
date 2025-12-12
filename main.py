@@ -92,6 +92,6 @@ class MainWindow(QMainWindow):
 
         tab.browser.urlChanged.connect(self.update_urlbar)
         tab.browser.loadFinished.connect(self.update_tab_title)
-         
+         #need to make my own home page
 
         
