@@ -94,4 +94,8 @@ class MainWindow(QMainWindow):
         tab.browser.loadFinished.connect(self.update_tab_title)
          #need to make my own home page
 
+           def close_tab(self, index):
+                if self.tabs.count() > 1:
+                self.tabs.removeTab(index)
+
         
