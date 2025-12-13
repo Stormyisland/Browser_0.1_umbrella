@@ -98,4 +98,9 @@ class MainWindow(QMainWindow):
                 if self.tabs.count() > 1:
                 self.tabs.removeTab(index)
 
+         def on_tab_changed(self, index):
+        if index != -1:
+            url = self.tabs.widget(index).browser.url().toString()
+            self.urlbar.setText(url)
+
         
