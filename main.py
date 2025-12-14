@@ -106,4 +106,7 @@ class MainWindow(QMainWindow):
         ef current_browser(self) -> QWebEngineView:
         return self.tabs.currentWidget().browser
 
+         def navigate_home(self):
+        self.current_browser().setUrl(QUrl("https://google.com"))
+
         
