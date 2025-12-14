@@ -103,4 +103,7 @@ class MainWindow(QMainWindow):
             url = self.tabs.widget(index).browser.url().toString()
             self.urlbar.setText(url)
 
+        ef current_browser(self) -> QWebEngineView:
+        return self.tabs.currentWidget().browser
+
         
