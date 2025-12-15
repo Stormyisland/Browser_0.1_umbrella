@@ -109,4 +109,9 @@ class MainWindow(QMainWindow):
          def navigate_home(self):
         self.current_browser().setUrl(QUrl("https://google.com"))
 
+  def on_tab_changed(self, index):
+        if index != -1:
+            url = self.tabs.widget(index).browser.url().toString()
+            self.urlbar.setText(url)
+
         
