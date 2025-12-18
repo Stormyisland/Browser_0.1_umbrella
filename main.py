@@ -123,3 +123,8 @@ class MainWindow(QMainWindow):
 
         def navigate_to_url(self):
            url = self.urlbar.text()
+
+
+         if not url.startswith("http"):
+            url = "http://" + url
+        self.current_browser().setUrl(QUrl(url))
