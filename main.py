@@ -127,4 +127,8 @@ class MainWindow(QMainWindow):
 
          if not url.startswith("http"):
             url = "http://" + url
-        self.current_browser().setUrl(QUrl(url))
+         self.current_browser().setUrl(QUrl(url))
+
+            def update_urlbar(self, qurl):
+         self.urlbar.setText(qurl.toString())
+         self.urlbar.setCursorPosition(0)
