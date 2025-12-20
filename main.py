@@ -132,3 +132,8 @@ class MainWindow(QMainWindow):
             def update_urlbar(self, qurl):
          self.urlbar.setText(qurl.toString())
          self.urlbar.setCursorPosition(0)
+
+        def update_tab_title(self):
+        browser = self.current_browser()
+        index = self.tabs.currentIndex()
+        self.tabs.setTabText(index, browser.page().title())
