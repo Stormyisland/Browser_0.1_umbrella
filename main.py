@@ -137,3 +137,6 @@ class MainWindow(QMainWindow):
         browser = self.current_browser()
         index = self.tabs.currentIndex()
         self.tabs.setTabText(index, browser.page().title())
+
+
+         def handle_download(self, download: QWebEngineDownloadItem):
