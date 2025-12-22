@@ -141,4 +141,9 @@ class MainWindow(QMainWindow):
 
          def handle_download(self, download: QWebEngineDownloadItem):
                  path, _ = QFileDialog.getSaveFileName(
-            self, "Save File", download.suggestedFileName()
+            self, "Save File", download.suggestedFileName()   )
+        if path:
+            download.setPath(path)
+            download.accept()
+
+                     
