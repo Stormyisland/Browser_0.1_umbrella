@@ -12,7 +12,7 @@ class Browser(QMainWindow):
     def initUI(self):
         # Create the web engine view
         self.browser = QWebEngineView()
-        self.browser.setUrl(QUrl("https://www.####.com"))
+        self.browser.setUrl(QUrl("https://www..com"))
          super().__init__()
         layout = QVBoxLayout(self)
 
@@ -152,3 +152,6 @@ class MainWindow(QMainWindow):
         window = MainWindow()
         window.show()
         sys.exit(app.exec_())
+
+"""working"""
+
